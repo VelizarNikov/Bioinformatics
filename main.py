@@ -1,5 +1,5 @@
 import sys
-from stats import base_count
+from stats import base_count, reverse_complement
 
 if len(sys.argv) < 2:
 	print("Usage: python3 main.py <path_to_genome>")
@@ -19,7 +19,9 @@ def main():
     print(f"Genome lenght: {len(genome)}")
     print(f"Base count: {bases}")
     print("")
-    print(f"---------------------Genome sequence:-------------------------")
+    print(f"---------------------Genome sequence-------------------------")
     print(genome[:100])
+    print("-------------------Reverse Complement------------------------")
+    print(reverse_complement(genome[:100]))
 
 main()
